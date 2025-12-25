@@ -35,18 +35,18 @@ CREATE TABLE bithospital.loginDoc(
 CREATE TABLE bithospital.availabilityDoc(
     doctor_id INT,
     a_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    a_date DATE NOT NULL,
-    a_time TIME NOT NULL,
+    a_date date NOT NULL,
+    a_time time NOT NULL,
     FOREIGN KEY (doctor_id) REFERENCES registerDoc(doctor_id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
 
 CREATE TABLE bithospital.booking(
+	booking_id INT AUTO_INCREMENT,
     patient_id INT,
     doctor_id INT,
     a_id INT,
-    booking_id INT AUTO_INCREMENT,
     booking_confirmation ENUM('confirm','cancel'),
     PRIMARY KEY (booking_id),
     FOREIGN KEY (patient_id) REFERENCES registerPat(patient_id)
@@ -99,4 +99,6 @@ CREATE TABLE bithospital.notifypatient(
 -- select* from bithospital.loginDoc;
 
 select* from bithospital.registerPat;
+
+select* from bithospital.availabilityDoc;
 
