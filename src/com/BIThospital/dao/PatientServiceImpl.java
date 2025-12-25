@@ -19,7 +19,7 @@ public class PatientServiceImpl implements PatientService{
 			sql = "insert into  bithospital.registerPat (patient_name,phone_number) values (?, ?)";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			preparedStatement.setString(1, patient.getPatientName());
-			preparedStatement.setInt(2, patient.getPhoneNo());
+			preparedStatement.setString(2, patient.getPhoneNo());
 			if(preparedStatement.executeUpdate() > 0) {
 				ResultSet resultSet = preparedStatement.getGeneratedKeys();
 				if(resultSet.next()) {

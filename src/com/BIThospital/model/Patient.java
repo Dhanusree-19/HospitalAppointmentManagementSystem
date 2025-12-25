@@ -3,12 +3,12 @@ package com.BIThospital.model;
 public class Patient {
 	private Integer patientId;
 	private String patientName;
-	private Integer phoneNo;
+	private String phoneNo;
 	private PatLogin patLogin;
 	
 	
 	
-	public Patient(Integer patientId, String patientName, Integer phoneNo, PatLogin patLogin) {
+	public Patient(Integer patientId, String patientName, String phoneNo, PatLogin patLogin) {
 		super();
 		this.patientId = patientId;
 		this.patientName = patientName;
@@ -16,7 +16,7 @@ public class Patient {
 		this.patLogin = patLogin;
 	}
 
-	public Patient(Integer patientId, String patientName, Integer phoneNo) {
+	public Patient(Integer patientId, String patientName, String phoneNo) {
 		super();
 		this.patientId = patientId;
 		this.patientName = patientName;
@@ -49,11 +49,11 @@ public class Patient {
 		this.patientName = patientName;
 	}
 
-	public Integer getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(Integer phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 	

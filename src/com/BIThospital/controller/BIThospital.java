@@ -3,17 +3,22 @@ package com.BIThospital.controller;
 import com.BIThospital.dao.BookingServiceImpl;
 import com.BIThospital.dao.DoctorAvailabilityServiceImpl;
 import com.BIThospital.dao.DoctorServiceImpl;
+import com.BIThospital.dao.NotifyPatientServiceImpl;
 import com.BIThospital.dao.PatientServiceImpl;
 import com.BIThospital.model.Booking;
 import com.BIThospital.model.BookingStatus;
 import com.BIThospital.model.DocLogin;
 import com.BIThospital.model.Doctor;
 import com.BIThospital.model.DoctorAvailability;
+import com.BIThospital.model.NotifyPatient;
 import com.BIThospital.model.PatLogin;
 import com.BIThospital.model.Patient;
 import com.BIThospital.service.BookingService;
 import com.BIThospital.service.DocotorService;
 import com.BIThospital.service.DoctorAvailabilityService;
+import com.BIThospital.service.NotifyPatientService;
+
+import ui.BeforeLogin;
 
 public class BIThospital {
 
@@ -28,8 +33,17 @@ public class BIThospital {
 		//DoctorAvailabilityService docAvailabilityService=new DoctorAvailabilityServiceImpl ();
 		//docAvailabilityService.add(new DoctorAvailability(1,null, "2025-12-12","11:00:00"));
 		
-		BookingService bookingService = new BookingServiceImpl();
-		bookingService.add(new Booking(1,1,2,null,BookingStatus.CONFIRM));
+		//BookingService bookingService = new BookingServiceImpl();
+		//bookingService.add(new Booking(1,1,2,null,BookingStatus.CONFIRM));
+		
+		//NotifyPatientService notifyPatientService = new NotifyPatientServiceImpl();
+		//notifyPatientService.add(new NotifyPatient(1,1,2,"you have appointment at 11:00"));
+		
+
+			BeforeLogin beforeLogin = new BeforeLogin();
+			beforeLogin.showWelcomeMessage();
+		
 		
 	}
 }
+

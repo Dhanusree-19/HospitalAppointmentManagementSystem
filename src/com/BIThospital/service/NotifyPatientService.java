@@ -1,5 +1,7 @@
 package com.BIThospital.service;
 
-public interface NotifyPatientService {
+import com.BIThospital.model.NotifyPatient;
 
+public interface NotifyPatientService {
+	public boolean add(NotifyPatient notifyPatient);
 }
